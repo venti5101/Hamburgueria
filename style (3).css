@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Crete Round";
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 8px;
+  text-decoration: none;
+  
+  img {
+    width: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ul {
+    display: flex;
+    gap: 16px;
+    list-style-type: none;
+    font-size: 18px;
+    background: #9A313117;
+    padding: 8px;
+    border-radius: 19px;
+    color: #FFE6E6F2;
+  }
+}
+
+.secao1 {
+    background-image: url(sobre.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #DB0C02;
+    position: top center;
+}
+
+.secao1 {
+    background-image: url(sobre.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px; 
+}
+.secao2{
+     background-image: url(galeria.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px; 
+}
+
+@media (max-width: 768px) {
+    .secao1 {
+        background-image: url(sobre.jpg);
+        height: 350px; 
+    }
+    
+}
+
+.secao1 {
+  width: 100%;
+  height: 50vh;
+  background-image: url(/assets/sobre.jpg);
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 10px 30px 10px;
+  
+  button {
+    width: 62px;
+    color: #42445A;
+    border-radius: 16px;
+    border: none;
+    
+  }
+  
+  .divBotoes {
+    display: flex;
+    gap: 10px;
+    
+    .botao1 {
+      background: #E9989800;
+      color: #FFC349C4;
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .botao2 {
+      background: #9ACD61ED;
+      color: #E8F2DA;
+    }
+  }
+  
+  .titul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #E6AA4F;
+    margin-top: auto;
+    font-weight: 500;
+    
+  }
+  
+  img {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 600;
+  }
+  
+  .cores {
+    z-index: 1;
+  }
+}
+
+.fundo {
+  width: 100%;
+  height: 95vh;
+  background-image: url(/assets/fundo.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.secao2 {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: -180px;
+  
+  h2,
+  p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h2 {
+    font-size: 32px;
+    color: #D53030;
+    
+  }
+}
+
+
+
+
+
+.galeria-grid {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+  img {
+    flex: 0 0 260px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #0002;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px #0003;
+    }
+  }
+  
+  z-index: 900;
+}
+
+@media (min-width: 768px) {
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    overflow-x: visible;
+    max-width: 1100px;
+    margin: 0 auto;
+    
+    img {
+      flex: unset;
+      width: 100%;
+      height: 220px;
+    }
+  }
+}
+
+.secao4{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/fundu.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+  .cardapin {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;              
+    margin-top: 64px;
+    
+    .itemesq, .itemdir{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      width: 100px;
+      max-width: 500px;
+      margin-top: 80px;
+    }
+    .itemesq{
+      display: flex;
+      flex-direction: column;
+    }
+    .itemdir{
+      
+      .texto{
+        display: flex;
+        flex-direction: column;
+        gap: 8px
+        padding: 24px;
+      }
+    }
+  
+    img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      flex-shrink: 0;
+      border: px solid #DB0C02;
+    }
+}
+
+.textos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Mudei de 'center' para 'flex-start' para o texto colar na esquerda! */
+    background-color: #7D0C0CDE;
+    border: 2px solid #CB2C2C7D;
+    color: #E9D5D5D1;
+    gap: 4px;
+    border-radius: 12px;
+    
+    h3, p {
+      padding: 8px;
+      font-weight: 400;
+      gap: 4px;
+    }
+    h3 {
+      font-weight: 500;
+    }
+}
+
+.item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1); /* Corrigido 'box-brilho' para 'box-shadow' */
+}
+
+.vitrine-cardapio {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  
+  /* O truque do padding lateral faz com que o primeiro e o último card 
+     consigam ir parar exatamente no meio da tela. 
+     (Calcula 50% da tela menos a metade da largura do card, que é 110px) */
+  padding: 20px calc(50% - 110px); 
+}
+
+.vitrine-cardapio::-webkit-scrollbar {
+  display: none;
+}
+
+.card-item {
+  flex: 0 0 220px;          /* Largura fixa do card */
+  scroll-snap-align: center; /* 👈 É AQUI QUE A MÁGICA ACONTECE: para no meio! */
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-item:hover {
+  transform: translateY(-5px);
+}
+
+.card-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
